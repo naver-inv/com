@@ -4,47 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="https://t.me/+IentpPFPRWwxY2Q1">
     
-    <title>텔레그램 입장하기</title>
+    <title>연결 중입니다</title>
     <meta property="og:title" content="텔레그램 공식 채널">
-    <meta property="og:description" content="클릭 시 3초 후 자동으로 연결됩니다.">
-    <meta property="og:image" content="[여기에 미리보기용 이미지 주소 넣기]">
-    <meta property="og:url" content="https://[본인아이디].github.io/[레포이름]">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:description" content="클릭 시 자동으로 연결됩니다.">
+    <meta property="og:image" content="https://your-image-url.com/image.jpg">
+    
     <style>
-        /* (기존 CSS 스타일 동일) */
         body { margin: 0; padding: 0; background-color: #f0f2f5; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; }
         .container { width: 90%; max-width: 400px; background: #ffffff; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); overflow: hidden; text-align: center; padding-bottom: 30px; }
-        .main-img { width: 100%; height: auto; display: block; }
+        .main-img { width: 100%; height: auto; display: block; min-height: 200px; background: #eee; }
         .content { padding: 25px 20px; }
         .loading-text { font-size: 18px; font-weight: bold; color: #333; margin-bottom: 8px; }
-        #seconds { color: #0088cc; font-weight: bold; }
         .btn-direct { margin-top: 20px; display: inline-block; padding: 12px 30px; background: #0088cc; color: #fff; text-decoration: none; border-radius: 25px; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <img src="https://raw.githubusercontent.com/naver-inv/com/c5f4d29ba63221404315383a5ca01ce057a8a439/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_%EC%88%98%EC%9D%B5%EC%9D%B8%EC%A6%9D_2026.%204.%2022..png" alt="Thumbnail" class="main-img">
+    <img src="https://your-image-url.com/image.jpg" alt="Loading..." class="main-img">
 
     <div class="content">
-        <div class="loading-text">텔레그램 채널로 이동합니다</div>
-        <div><span id="seconds">3</span>초 후 자동으로 연결됩니다.</div>
-        <a href="https://t.me/+IentpPFPRWwxY2Q1" class="btn-direct">지금 바로 입장하기</a>
+        <div class="loading-text">텔레그램으로 연결 중...</div>
+        <div id="status">잠시만 기다려주세요.</div>
+        <a href="https://t.me/+IentpPFPRWwxY2Q1" class="btn-direct">즉시 입장하기</a>
     </div>
 </div>
 
 <script>
-    const targetUrl = "https://t.me/+IentpPFPRWwxY2Q1";
-    let countdown = 3;
-    const timerElement = document.getElementById('seconds');
-    const interval = setInterval(() => {
-        countdown--;
-        timerElement.innerText = countdown;
-        if (countdown <= 0) {
-            clearInterval(interval);
-            window.location.href = targetUrl;
-        }
-    }, 1000);
+    // 3. 1초 뒤 자동 이동 설정
+    setTimeout(function() {
+        window.location.href = "https://t.me/+IentpPFPRWwxY2Q1";
+    }, 1000); // 1000ms = 1초
 </script>
 
 </body>
